@@ -1,0 +1,101 @@
+<html lang="en">
+
+<head>
+    <title style="color: brown">Login</title>
+    <meta name="author" content="Zaur">
+    <meta descryption content="Presentation of website">
+    <meta name="keywords" content="technology, cyber security, software">
+    <meta http-equiv="refresh" content="100">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/login.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/node-snackbar@latest/dist/snackbar.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div class="form-container  sign-in-container">
+            <form action="#">
+                <div class="header">Sign In</div>
+                
+                <div class="button-input-group mt-5">
+                    <div class="group input-group">
+                        <input type="text" id="u" placeholder="username" required>
+                    </div>
+                    <div class="group input-group">
+                        <input type="password" id="p" placeholder="Password" required pattern=".{8,}">
+                    </div>
+                    <div class="alert-text signup__alert">
+                        <span class="help__text">At least 8 character</span>
+                    </div>
+                    <div class="form-link forgot">
+                        <a href="#" class="login-link">Forgot your password?</a>
+                    </div>
+                    <div class="group button-group">
+                        <button type="button" class="signin-btn">Sign in</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+        
+        
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-right">
+                    <img src="https://source.unsplash.com/random/?bank,book,money" alt="" width="100%" height="100%"
+                    style="object-fit: cover;" srcset="">
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+    
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/node-snackbar@latest/src/js/snackbar.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+<script>
+    $(".signin-btn").click(function(){
+        un = $("#u").val()
+        p = $("#p").val()
+        data = "username=" + un + "&password=" + p
+        $.ajax({
+            type: "post",
+            url: "/check-login",
+            data: data,
+            crossDomain: true,
+            success: function (response) {
+                r = JSON.parse(response)
+                if(r.StatusLogin == "Sukses"){
+                    Cookies.set("key", r.Hash,  { expires: 1 })
+                    Snackbar.show({
+                        text: 'Login Success',
+                        backgroundColor: '#fff',
+                        textColor: '#24D1BC',
+                        pos: 'top-right',
+                        duration: '2000',
+                        showAction: false,
+                    })
+                    window.location.replace('/dashboard/siswa/');
+                }else{
+                    Snackbar.show({
+                        text: 'Login Failed',
+                        // backgroundColor: '#fff',
+                        textColor: '#ff69b4',
+                        pos: 'top-right',
+                        duration: '2000',
+                        showAction: false,
+                    });
+                }
+                
+            }
+        })
+    })
+</script>
+</html>

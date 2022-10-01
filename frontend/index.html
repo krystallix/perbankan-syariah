@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  
+  <title>Website prodi PS</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  
+  <!-- Favicons -->
+  <link href="assets/img/Picture1.png" rel="icon">
+  <link href="assets/img/Picture1.png" rel="Picture1">
+  
+  <!-- Google Fonts -->
+  <link
+  href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+  rel="stylesheet">
+  
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/node-snackbar@latest/dist/snackbar.min.css" />
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/datatables.css">
+  
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  
+  <!-- =======================================================
+    * Template Name: Selecao - v4.8.0
+    * Template URL: https://bootstrapmade.com/selecao-bootstrap-template/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+  </head>
+  
+  <body>
+    <div class="modal fade" id="home-berita-modal" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body px-4 py-3">
+            <div id="judul-home">
+              
+            </div>
+            <div id="tanggal-home">
+              
+            </div>
+            <div class="pt-4">
+              <img  id="foto-home" src="" alt="" style="height: 300px; width: 100%; padding: 2px; object-fit: cover;">
+            </div>
+            <div class="px-2" id="isi-home">
+              
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-center   ">
+      <div class="container d-flex align-items-center justify-content-between">
+        
+        <div class="logo">
+          <!-- <h1><a href="index.html">PERBANKAN SYARIAH</a></h1> -->
+          <!-- Uncomment below if you prefer to use an image logo -->
+          <a href="index.html"><img src="assets/img/Untitled.png" alt="" class="img-fluid" width="100px"
+            height="170px"></a>
+          </div>
+          
+          <nav id="navbar" class="navbar">
+            <ul>
+              <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+              <li><a class="nav-link scrollto" href="#about">Tentang</a></li>
+              <li><a class="nav-link scrollto" href="#Perbankan">Info PS</a></li>
+              <li><a class="nav-link scrollto " href="#services">Berita</a></li>
+              <li><a class="nav-link scrollto" href="#portfolio">Galeri</a></li>
+              <li><a class="nav-link scrollto" href="#Guru">Guru</a></li>
+              <li><a class="nav-link scrollto" href="#history">Mapel</a></li>
+              <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+                <ul>
+                  <li><a href="#">Drop Down 1</a></li>
+                  <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                    <ul>
+                      <li><a href="#">Deep Drop Down 1</a></li>
+                      <li><a href="#">Deep Drop Down 2</a></li>
+                      <li><a href="#">Deep Drop Down 3</a></li>
+                      <li><a href="#">Deep Drop Down 4</a></li>
+                      <li><a href="#">Deep Drop Down 5</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Drop Down 2</a></li>
+                  <li><a href="#">Drop Down 3</a></li>
+                  <li><a href="#">Drop Down 4</a></li>
+                </ul>
+              </li> -->
+              <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+          </nav><!-- .navbar -->
+          
+        </div>
+      </header><!-- End Header -->
+      
+      <!-- ======= Hero Section ======= -->
+      <section id="hero" class="d-flex flex-column justify-content-end align-items-center">
+        <div id="heroCarousel" data-bs-interval="5000" class="container carousel carousel-fade" data-bs-ride="carousel">
+          
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div class="carousel-container">
+              <h2 class="animate__animated animate__fadeInDown">Selamat Datang di <span>Perbankan Syariah</span></h2>
+              <p class="animate__animated fanimate__adeInUp">Layanan Perbankan Syariah adalah salah satu konsentrasi
+                keahlian di bawah Program Keahlian Akuntansi dan Keuangan Lembaga.</p>
+                <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Selengkapnya</a>
+              </div>
+            </div>
+            
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+              <div class="carousel-container">
+                <h2 class="animate__animated animate__fadeInDown">Perbankan Syariah</h2>
+                <p class="animate__animated animate__fadeInUp">
+                  Layanan Perbankan Syariah adalah salah satu konsentrasi keahlian di bawah Program Keahlian Akuntansi dan
+                  Keuangan Lembaga </p>
+                  <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Selengkapnya</a>
+                </div>
+              </div>
+              
+              <!-- Slide 3 -->
+              <!-- <div class="carousel-item">
+                <div class="carousel-container">
+                  <h2 class="animate__animated animate__fadeInDown">Sequi ea ut et est quaerat</h2>
+                  <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+                  <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+                </div>
+              </div> -->
+              
+              <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
+              </a>
+              
+              <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
+              </a>
+              
+            </div>
+            
+            <!-- <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
+              <defs>
+                <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
+                </defs>
+                <g class="wave1">
+                  <use xlink:href="#wave-path" x="50" y="3" fill="rgba(255,255,255, .1)">
+                  </g>
+                  <g class="wave2">
+                    <use xlink:href="#wave-path" x="50" y="0" fill="rgba(255,255,255, .2)">
+                    </g>
+                    <g class="wave3">
+                      <use xlink:href="#wave-path" x="50" y="9" fill="#fff">
+                      </g>
+                    </svg> -->
+                    
+                  </section><!-- End Hero -->
+                  
+                  <main id="main">
+                    
+                    <!-- ======= About Section ======= -->
+                    <section id="about" class="about">
+                      <div class="container">
+                        
+                        <div class="section-title" data-aos="zoom-out" style="margin-bottom: -25px;">
+                          <h2>Tentang</h2>
+                          <p>Perbankan Syariah</p>
+                        </div>
+                        
+                        
+                        
+                        <div class="row content" data-aos="fade-up">
+                          <div class="col-lg-12">
+                            <p>Layanan Perbankan Syariah adalah salah satu konsentrasi keahlian di bawah Program Keahlian Akuntansi dan
+                              Keuangan Lembaga.</p>
+                              <p>Satu dari delapan konsentrasi keahlian di SMKN 1 Bantul yang mempunyai ciri khas sebagai konsentrasi
+                                keahlian perbankan dengan dasar syariat Islam.</p>
+                                <p>Bertujuan mencetak agen syariah yang Amanah, yang kompeten sebagai teller, custumer service, marketing,
+                                  dan accounting di bidang Perbankan Syariah.</p>
+                                  <div class="section-title mt-5" data-aos="zoom-out" style="margin-bottom: -25px;">
+                                    <h2>Sejarah Jurusan</h2>
+                                    <p>Perbankan Syariah</p>
+                                  </div>
+                                  <p>
+                                    berdiri pada tahun ajaran 2014/2015 berdasarkan Surat Keputusan Kepada Dinas Pendidikan Menengah dan Non
+                                    Formal Kabupaten Bantul Nomor: 88d/Tahun 2015 tertanggal 15 Juni 2015
+                                    
+                                  </p>
+                                  <ul>
+                                    <li><i class="ri-check-double-line"></i>Lulusan ke-1 tahun 2017 (33 siswa)</li>
+                                    <li><i class="ri-check-double-line"></i>Lulusan ke-2 tahun 2018 (32 siswa)</li>
+                                    <li><i class="ri-check-double-line"></i>Lulusan ke-3 tahun 2019 (32 siswa)</li>
+                                    <li><i class="ri-check-double-line"></i>Lulusan ke-4 tahun 2020 (32 siswa)</li>
+                                    <li><i class="ri-check-double-line"></i>Lulusan ke-5 tahun 2021 (31 siswa)</li>
+                                    <li><i class="ri-check-double-line"></i>Lulusan ke-6 tahun 2022 (35 siswa)</li>
+                                  </ul>
+                                </div>
+                              </div>
+                              
+                              <div class="row">
+                                <div class="col-lg-12 pt-4 pt-lg-0" style="margin-top: 100px;">
+                                  
+                                  <p class="sambutan">
+                                    <img class="img-ketua" src="assets/img/Pi.png" alt="" width="300px" height="300px">
+                                    
+                                    <div class="section-title" data-aos="zoom-out" style="margin-bottom: -25px;">
+                                      <h2>Tentang</h2>
+                                      <p>Sambutan Ketua Jurusan</p>
+                                    </div>
+                                    
+                                    <P>Ririh Damayanti Wisnu Giyono, M.Acc.</P>
+                                    Assalamualaikum
+                                    selamat datang di web Perbankan Syariah.
+                                    Platform ini merupakan rumah maya Perbankan Syariah Skansaba. Di sini kalian bisa menemukan banyak hal
+                                    tentang Perbankan Syariah, tentang Bank Mini, dengan segala kegiatan asyik dan positif dalam Pendidikan.
+                                    Berkenalan dengan kami, agen-agen syariah yang tetap berusaha berdiri tegap di dunia Pendidikan maupun
+                                    perekonomian umat.
+                                    Salam syariah, “Cerdas, Berakhlak dan SyarI”
+                                    Wassalam
+                                  </p>
+                                  <!-- <a href="#" class="btn-learn-more">Learn More</a> -->
+                                </div>
+                              </div>
+                              
+                            </div>
+                          </section><!-- End About Section -->
+                          
+                          <!-- ======= Features Section ======= -->
+                          <section id="Perbankan" class="Info PS">
+                            <div class="container">
+                              <section id="features" class="features">
+                                <div class="container">
+                                  
+                                  <ul class="nav nav-tabs row d-flex">
+                                    <li class="nav-item col-3" data-aos="zoom-in">
+                                      <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">
+                                        <i class="bi bi-cash-coin"></i>
+                                        <h4 class="d-none d-lg-block">Bank Mini</h4>
+                                      </a>
+                                    </li>
+                                    <li class="nav-item col-3" data-aos="zoom-in" data-aos-delay="100">
+                                      <a class="nav-link" data-bs-toggle="tab" href="#tab-2">
+                                        <i class="ri-body-scan-line"></i>
+                                        <h4 class="d-none d-lg-block">Prestasi</h4>
+                                      </a>
+                                    </li>
+                                    <li class="nav-item col-3" data-aos="zoom-in" data-aos-delay="200">
+                                      <a class="nav-link" data-bs-toggle="tab" href="#tab-3">
+                                        <i class="bi bi-person-fill"></i>
+                                        <h4 class="d-none d-lg-block">Siswa</h4>
+                                      </a>
+                                    </li>
+                                    <li class="nav-item col-3" data-aos="zoom-in" data-aos-delay="300">
+                                      <a class="nav-link" data-bs-toggle="tab" href="#tab-4">
+                                        <i class="bi bi-book-half"></i>
+                                        <h4 class="d-none d-lg-block">Visi & Misi</h4>
+                                      </a>
+                                    </li>
+                                  </ul>
+                                  
+                                  <div class="tab-content" data-aos="fade-up">
+                                    <div class="tab-pane active show" id="tab-1">
+                                      <div class="row">
+                                        <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                                          <h3>BANK MINI LKM MITRA SISWA ABADI</h3>
+                                          <p class="fst-italic">
+                                            Didirikan dan mulai beroperasi pada April 2008 dengan modal awal Rp2.000.000 dari dewan sekolah
+                                            berfungsi sebagai bank mini yang melayani tabungan siswa
+                                            Mulai tahun 2017 bertambah fungsinya sebagai Lab Perbankan Syariah.
+                                            Mengikuti Perkembangan kurikulum, LKM Mitra Siswa Abadi berfungsi pula sebagai Teaching Factory
+                                            Layanan Perbankan Syariah
+                                            Sehingga saat ini, LKM Mitra Siswa Abadi berfungsi sebagai Teaching Factory, Lab Perbankan, tempat
+                                            praktek siswa dan sebagai bank mini yang melayani tabungan nasabah.
+                                            
+                                          </p>
+                                          
+                                        </ul>
+                                        <p>
+                                          Berawal sebagai unit produksi sekaligus sebagai tempat belajar siswa
+                                          Sejak 2017 sekaligus sebagai Laboratorium Perbankan Syariah
+                                          Desember 2020 sempat melobby BMT Bina Sejahtera Kulon Progo untuk menjadi IDUKA pasangan untuk
+                                          TEFA, dengan rencana Kerjasama di bidang simpan pinjam syariah
+                                          2020-2022 kegiatan terbatas pada pelayanan dengan perjanjian, tidak buka teller.
+                                          2022 memulai Kerjasama dengan Bank Syariah Indonesia Kantor Cabang Gedong Kuning Yogyakarta
+                                          melalui siswa PKL
+                                          
+                                        </p>
+                                        <h3>LAYANAN TABUNGAN BANK MINI</h3>
+                                        <div>
+                                        </p>
+                                        <ul>
+                                          <li><i class="ri-check-double-line"></i> Nasabah adalah siswa aktif SMK Negeri 1 Bantul dan
+                                            organisasi siswa
+                                            Tabungan menggunakan prinsip wadian (titipan) tanpa bunga dan biaya administrasi bulanan</li>
+                                            <li><i class="ri-check-double-line"></i>Setoran pertama Rp10.000,00 dan setoran selanjutnya
+                                              minimal Rp5.000,00 Saldo minimal Rp10.000,00</li>
+                                              <li><i class="ri-check-double-line"></i>Penutupan rekening tabungan dikenakan biaya Rp5.000,00
+                                                per rekening
+                                                Pelayanan teller buka setiap hari kerja (jam sekolah)
+                                              </li>
+                                              <li><i class="ri-check-double-line"></i>Customer Service dan Teller adalah siswa kelas XI.LPS
+                                                dan kelas X.AKL dengan piket bergantian
+                                              </li>
+                                            </ul>
+                                            <ul>
+                                              <li><i class="ri-check-double-line"></i>Melayani Tabungan Siswa</li>
+                                              <li><i class="ri-check-double-line"></i>Melayani Tabungan Kunjungan Industri Kelas 11</li>
+                                              <li><i class="ri-check-double-line"></i>Pelayanan pembukaan rekening tabungan baru</li>
+                                              <p>
+                                              </div>
+                                            </div>
+                                            <div class="col-lg-6 order-1 order-lg-2 text-center">
+                                              <img src="assets/img/2022_08_30_10_03_IMG_4799.JPG" alt="" class="img-fluid">
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="tab-pane" id="tab-2">
+                                          <h3>PRESTASI SISWA PERBANKAN SYARIAH</h3>
+                                          <div class="card mb-4">
+                                            <div class="card-body">
+                                              <!--Table-->
+                                              <table class="table table-hover">
+                                                <!--Table head-->
+                                                <thead class="mdb-color darken-3">
+                                                  <tr class="text-dark text-center">
+                                                    <th>#</th>
+                                                    <th>NIS</th>
+                                                    <th>Nama Siswa</th>
+                                                    <th>Jenis Prestasi</th>
+                                                    <th>Nama Prestasi</th>
+                                                    <th>Tahun Prestasi</th>
+                                                  </tr>
+                                                </thead>
+                                                <!--Table head-->
+                                                <!--Table body-->
+                                                <tbody class="data-prestasi">
+                                                  
+                                                </tbody>
+                                                <!--Table body-->
+                                              </table>
+                                              <!--Table-->
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="tab-pane" id="tab-3">
+                                          <table class="table table-siswa table-striped">
+                                            <!--Table head-->
+                                            <thead>
+                                              <tr>
+                                                <th>NO</th>
+                                                <th>NIS</th>
+                                                <th>NAMA</th>
+                                                <th>JENIS KELAMIN</th>
+                                                <th>KELAS</th>
+                                              </tr>
+                                            </thead>
+                                            <!--Table head-->
+                                            <!--Table body-->
+                                            <tbody class="data-siswa">
+                                              
+                                            </tbody>
+                                            <!--Table body-->
+                                          </table>
+                                        </div>
+                                        <div class="tab-pane" id="tab-4">
+                                          <div class="row text-center">
+                                            <div class="col-lg-12 order-2 order-lg-1 mt-3 mt-lg-0">
+                                              <h3>VISI</h3>
+                                              <p>
+                                                Membentuk Agen Syari'ah yang Amanah
+                                              </p>
+                                              <h3>MISI</h3>
+                                              <p>
+                                                Mendidik sepenuh hati dengan menanamkan karakter berdasarkan syariat islam
+                                              </p>
+                                              <!-- <ul>
+                                                <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                                                <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+                                                <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+                                              </ul> -->
+                                            </div>
+                                            <!-- <div class="col-lg-6 order-1 order-lg-2 text-center">
+                                              <img src="assets/img/Picture1.png" alt="" class="img-fluid">
+                                            </div> -->
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </section>
+                              </section><!-- End Features Section -->
+                              
+                              <!-- ======= Cta Section ======= -->
+                              <!-- <section id="cta" class="cta">
+                                <div class="container">
+                                  
+                                  <div class="row" data-aos="zoom-out">
+                                    <div class="col-lg-9 text-center text-lg-start">
+                                      <h3>Call To Action</h3>
+                                      <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    </div>
+                                    <div class="col-lg-3 cta-btn-container text-center">
+                                      <a class="cta-btn align-middle" href="#">Call To Action</a>
+                                    </div>
+                                  </div>
+                                  
+                                </div>
+                              </section> -->
+                              <!-- End Cta Section -->
+                              
+                              <!-- ======= Services Section ======= -->
+                              <section id="services" class="services">
+                                <div class="container">
+                                  
+                                  <div class="section-title text-center" data-aos="zoom-out">
+                                    
+                                    <p>Berita Terkini</p>
+                                  </div>
+                                  
+                                  <div class="row" id="berita-show">
+                                    
+                                    <!-- <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
+                                      <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="100">
+                                        <div class="icon"><i class="bi bi-book" style="color: #e9bf06;"></i></div>
+                                        <h4 class="title"><a href="">Dolor Sitema</a></h4>
+                                        <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                          commodo consequat tarad limino ata</p>
+                                        </div>
+                                      </div>
+                                      
+                                      <div class="col-lg-4 col-md-6 mt-5 mt-lg-0 ">
+                                        <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="200">
+                                          <div class="icon"><i class="bi bi-card-checklist" style="color: #3fcdc7;"></i></div>
+                                          <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
+                                          <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                                            fugiat nulla pariatur</p>
+                                          </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 mt-5">
+                                          <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="300">
+                                            <div class="icon"><i class="bi bi-binoculars" style="color:#41cf2e;"></i></div>
+                                            <h4 class="title"><a href="">Magni Dolores</a></h4>
+                                            <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                              mollit anim id est laborum</p>
+                                            </div>
+                                          </div>
+                                          
+                                          <div class="col-lg-4 col-md-6 mt-5">
+                                            <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="400">
+                                              <div class="icon"><i class="bi bi-globe" style="color: #d6ff22;"></i></div>
+                                              <h4 class="title"><a href="">Nemo Enim</a></h4>
+                                              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                                                praesentium voluptatum deleniti atque</p>
+                                              </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 mt-5">
+                                              <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="500">
+                                                <div class="icon"><i class="bi bi-clock" style="color: #4680ff;"></i></div>
+                                                <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
+                                                <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum
+                                                  soluta nobis est eligendi</p>
+                                                </div> -->
+                                              </div>
+                                            </div>
+                                            
+                                          </div>
+                                        </section><!-- End Services Section -->
+                                        
+                                        <!-- ======= Portfolio Section ======= -->
+                                        <section id="portfolio" class="portfolio">
+                                          <div class="container">
+                                            
+                                            <div class="section-title" data-aos="zoom-out">
+                                              <h2>Galeri</h2>
+                                              <p>Galeri dan histori</p>
+                                            </div>
+                                            
+                                            <div class="photo-area">
+                                              <section id="photos">
+                                                <img src="http://placekitten.com/350/275">
+                                                <img src="http://placekitten.com/350/215">
+                                                <img src="http://placekitten.com/350/315">
+                                                <img src="http://placekitten.com/350/325">
+                                                <img src="http://placekitten.com/350/300">
+                                                <img src="http://placekitten.com/350/350">
+                                                <img src="http://placekitten.com/350/200">
+                                                
+                                                <img src="http://placekitten.com/350/210">
+                                                <img src="http://placekitten.com/350/175">
+                                              </section>  
+                                            </div>
+                                          </div>
+                                        </section><!-- End Portfolio Section -->
+                                        
+                                        <!-- ======= Testimonials Section ======= -->
+                                        <section id="Guru" class="Guru">
+                                          <div class="container">
+                                            <section id="testimonials" class="testimonials">
+                                              <div class="container">
+                                                
+                                                <div class="section-title" data-aos="zoom-out">
+                                                  <h2>GURU JURUSAN</h2>
+                                                  <p>PENGAJAR JURUSAN</p>
+                                                </div>
+                                                
+                                                <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+                                                  <div class="swiper-wrapper" id="data-guru">
+                                                    
+                                                    >
+                                                    <!-- End testimonial item -->
+                                                    
+                                                    
+                                                    
+                                                    <!-- <div class="swiper-slide">
+                                                      <div class="testimonial-item">
+                                                        <p>
+                                                          <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                                          Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                                                          <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                                        </p>
+                                                        <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                                                        <h3>Matt Brandon</h3>
+                                                        <h4>Freelancer</h4>
+                                                      </div> -->
+                                                    </div><!-- End testimonial item -->
+                                                    
+                                                    <!-- <div class="swiper-slide">
+                                                      <div class="testimonial-item">
+                                                        <p>
+                                                          <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                                          Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                                                          <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                                        </p>
+                                                        <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                                                        <h3>John Larson</h3>
+                                                        <h4>Entrepreneur</h4>
+                                                      </div> -->
+                                                    </div><!-- End testimonial item -->
+                                                    
+                                                  </div>
+                                                  <div class="swiper-pagination"></div>
+                                                </div>
+                                              </div>
+                                              
+                                            </div>
+                                          </section>
+                                        </section><!-- End Testimonials Section -->
+                                        
+                                        <!-- ======= Pricing Section ======= -->
+                                        <!-- <section id="pricing" class="pricing">
+                                          <div class="container">
+                                            
+                                            <div class="section-title" data-aos="zoom-out">
+                                              <h2>Pricing</h2>
+                                              <p>Our Competing Prices</p>
+                                            </div>
+                                            
+                                            <div class="row">
+                                              
+                                              <div class="col-lg-3 col-md-6">
+                                                <div class="box" data-aos="zoom-in">
+                                                  <h3>Free</h3>
+                                                  <h4><sup>$</sup>0<span> / month</span></h4>
+                                                  <ul>
+                                                    <li>Aida dere</li>
+                                                    <li>Nec feugiat nisl</li>
+                                                    <li>Nulla at volutpat dola</li>
+                                                    <li class="na">Pharetra massa</li>
+                                                    <li class="na">Massa ultricies mi</li>
+                                                  </ul>
+                                                  <div class="btn-wrap">
+                                                    <a href="#" class="btn-buy">Buy Now</a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              
+                                              <div class="col-lg-3 col-md-6 mt-4 mt-md-0">
+                                                <div class="box featured" data-aos="zoom-in" data-aos-delay="100">
+                                                  <h3>Business</h3>
+                                                  <h4><sup>$</sup>19<span> / month</span></h4>
+                                                  <ul>
+                                                    <li>Aida dere</li>
+                                                    <li>Nec feugiat nisl</li>
+                                                    <li>Nulla at volutpat dola</li>
+                                                    <li>Pharetra massa</li>
+                                                    <li class="na">Massa ultricies mi</li>
+                                                  </ul>
+                                                  <div class="btn-wrap">
+                                                    <a href="#" class="btn-buy">Buy Now</a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              
+                                              <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
+                                                <div class="box" data-aos="zoom-in" data-aos-delay="200">
+                                                  <h3>Developer</h3>
+                                                  <h4><sup>$</sup>29<span> / month</span></h4>
+                                                  <ul>
+                                                    <li>Aida dere</li>
+                                                    <li>Nec feugiat nisl</li>
+                                                    <li>Nulla at volutpat dola</li>
+                                                    <li>Pharetra massa</li>
+                                                    <li>Massa ultricies mi</li>
+                                                  </ul>
+                                                  <div class="btn-wrap">
+                                                    <a href="#" class="btn-buy">Buy Now</a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              
+                                              <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
+                                                <div class="box" data-aos="zoom-in" data-aos-delay="300">
+                                                  <span class="advanced">Advanced</span>
+                                                  <h3>Ultimate</h3>
+                                                  <h4><sup>$</sup>49<span> / month</span></h4>
+                                                  <ul>
+                                                    <li>Aida dere</li>
+                                                    <li>Nec feugiat nisl</li>
+                                                    <li>Nulla at volutpat dola</li>
+                                                    <li>Pharetra massa</li>
+                                                    <li>Massa ultricies mi</li>
+                                                  </ul>
+                                                  <div class="btn-wrap">
+                                                    <a href="#" class="btn-buy">Buy Now</a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              
+                                            </div>
+                                            
+                                          </div>
+                                        </section> -->
+                                        <!-- End Pricing Section -->
+                                        
+                                        <!-- ======= F.A.Q Section ======= -->
+                                        <section id="history" class="Sejarah">
+                                          <div class="container">
+                                            <section id="faq" class="faq">
+                                              <div class="container">
+                                                <style>
+                                                  ul li {
+                                                    list-style: none;
+                                                  }
+                                                </style>
+                                                
+                                                <div class="section-title" data-aos="zoom-out">
+                                                  <h2>MAPEL</h2>
+                                                  <p>MATA PELAJARAN JURUSAN</p>
+                                                  <div id="mapel" class="ps-2 fs-4">
+                                                    
+                                                  </div>
+                                                </div>
+                                              </section>
+                                            </section><!-- End F.A.Q Section -->
+                                            
+                                            <!-- ======= Team Section ======= -->
+                                            <!-- <section id="team" class="team">
+                                              <div class="container">
+                                                
+                                                <div class="section-title" data-aos="zoom-out">
+                                                  <h2>Team</h2>
+                                                  <p>Our Hardworking Team</p>
+                                                </div>
+                                                
+                                                <div class="row">
+                                                  
+                                                  <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                                                    <div class="member" data-aos="fade-up">
+                                                      <div class="member-img">
+                                                        <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
+                                                        <div class="social">
+                                                          <a href=""><i class="bi bi-twitter"></i></a>
+                                                          <a href=""><i class="bi bi-facebook"></i></a>
+                                                          <a href=""><i class="bi bi-instagram"></i></a>
+                                                          <a href=""><i class="bi bi-linkedin"></i></a>
+                                                        </div>
+                                                      </div>
+                                                      <div class="member-info">
+                                                        <h4>Walter White</h4>
+                                                        <span>Chief Executive Officer</span>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                  
+                                                  <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                                                    <div class="member" data-aos="fade-up" data-aos-delay="100">
+                                                      <div class="member-img">
+                                                        <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
+                                                        <div class="social">
+                                                          <a href=""><i class="bi bi-twitter"></i></a>
+                                                          <a href=""><i class="bi bi-facebook"></i></a>
+                                                          <a href=""><i class="bi bi-instagram"></i></a>
+                                                          <a href=""><i class="bi bi-linkedin"></i></a>
+                                                        </div>
+                                                      </div>
+                                                      <div class="member-info">
+                                                        <h4>Sarah Jhonson</h4>
+                                                        <span>Product Manager</span>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                  
+                                                  <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                                                    <div class="member" data-aos="fade-up" data-aos-delay="200">
+                                                      <div class="member-img">
+                                                        <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
+                                                        <div class="social">
+                                                          <a href=""><i class="bi bi-twitter"></i></a>
+                                                          <a href=""><i class="bi bi-facebook"></i></a>
+                                                          <a href=""><i class="bi bi-instagram"></i></a>
+                                                          <a href=""><i class="bi bi-linkedin"></i></a>
+                                                        </div>
+                                                      </div>
+                                                      <div class="member-info">
+                                                        <h4>William Anderson</h4>
+                                                        <span>CTO</span>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                  
+                                                  <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                                                    <div class="member" data-aos="fade-up" data-aos-delay="300">
+                                                      <div class="member-img">
+                                                        <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
+                                                        <div class="social">
+                                                          <a href=""><i class="bi bi-twitter"></i></a>
+                                                          <a href=""><i class="bi bi-facebook"></i></a>
+                                                          <a href=""><i class="bi bi-instagram"></i></a>
+                                                          <a href=""><i class="bi bi-linkedin"></i></a>
+                                                        </div>
+                                                      </div>
+                                                      <div class="member-info">
+                                                        <h4>Amanda Jepson</h4>
+                                                        <span>Accountant</span>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                  
+                                                </div>
+                                                
+                                              </div> -->
+                                            </section>
+                                            <!-- End Team Section -->
+                                            
+                                            <!-- ======= Contact Section ======= -->
+                                            <!-- <section id="contact" class="contact">
+                                              <div class="container">
+                                                
+                                                <div class="section-title" data-aos="zoom-out">
+                                                  <h2>Contact</h2>
+                                                  <p>Contact Us</p>
+                                                </div>
+                                                
+                                                <div class="row mt-5">
+                                                  
+                                                  <div class="col-lg-4" data-aos="fade-right">
+                                                    <div class="info">
+                                                      <div class="address">
+                                                        <i class="bi bi-geo-alt"></i>
+                                                        <h4>Location:</h4>
+                                                        <p>A108 Adam Street, New York, NY 535022</p>
+                                                      </div>
+                                                      
+                                                      <div class="email">
+                                                        <i class="bi bi-envelope"></i>
+                                                        <h4>Email:</h4>
+                                                        <p>info@example.com</p>
+                                                      </div>
+                                                      
+                                                      <div class="phone">
+                                                        <i class="bi bi-phone"></i>
+                                                        <h4>Call:</h4>
+                                                        <p>+1 5589 55488 55s</p>
+                                                      </div>
+                                                      
+                                                    </div>
+                                                    
+                                                  </div>
+                                                  
+                                                  <div class="col-lg-8 mt-5 mt-lg-0" data-aos="fade-left">
+                                                    
+                                                    <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                                                      <div class="row">
+                                                        <div class="col-md-6 form-group">
+                                                          <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                                                        </div>
+                                                        <div class="col-md-6 form-group mt-3 mt-md-0">
+                                                          <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                                                        </div>
+                                                      </div>
+                                                      <div class="form-group mt-3">
+                                                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                                                      </div>
+                                                      <div class="form-group mt-3">
+                                                        <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                                                      </div>
+                                                      <div class="my-3">
+                                                        <div class="loading">Loading</div>
+                                                        <div class="error-message"></div>
+                                                        <div class="sent-message">Your message has been sent. Thank you!</div>
+                                                      </div>
+                                                      <div class="text-center"><button type="submit">Send Message</button></div>
+                                                    </form>
+                                                    
+                                                  </div>
+                                                  
+                                                </div>
+                                                
+                                              </div>
+                                            </section> -->
+                                            <!-- End Contact Section -->
+                                            
+                                            
+                                          </main><!-- End #main -->
+                                          
+                                          <!-- ======= Footer ======= -->
+                                          <footer id="footer">
+                                            <div class="container">
+                                              <h3>Perbankan Syariah</h3>
+                                              <p>Cerdas, Berakhlak dan Syar'i</p>
+                                              <!-- <div class="social-links">
+                                                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                                                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                                                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                                                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                                                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                                              </div> -->
+                                              <div class="copyright">
+                                                &copy; Copyright <strong><span>XI RPL 1</span></strong>. All Rights Reserved
+                                              </div>
+                                              <div class="credits">
+                                                <!-- All the links in the footer should remain intact. -->
+                                                <!-- You can delete the links only if you purchased the pro version. -->
+                                                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                                                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/selecao-bootstrap-template/ -->
+                                                Designed by <a href="https://www.instagram.com/rendialfian__">XI RPL 1</a>
+                                              </div>
+                                            </div>
+                                          </footer><!-- End Footer -->
+                                          
+                                          <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+                                            class="bi bi-arrow-up-short"></i></a>
+                                            
+                                            <!-- Vendor JS Files -->
+                                            <script src="assets/vendor/aos/aos.js"></script>
+                                            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+                                            <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.21/js/jquery.dataTables.min.js"
+                                            integrity="sha512-BkpSL20WETFylMrcirBahHfSnY++H2O1W+UnEEO4yNIl+jI2+zowyoGJpbtk6bx97fBXf++WJHSSK2MV4ghPcg=="
+                                            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+                                            <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+                                            <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+                                            <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+                                            <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+                                            <script src="assets/vendor/php-email-form/validate.js"></script>
+                                            <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"
+                                            integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q=="
+                                            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+                                            
+                                            <script type="text/javascript"
+                                            src="https://cdn.jsdelivr.net/npm/node-snackbar@latest/src/js/snackbar.min.js"></script>
+                                            <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+                                            
+                                            
+                                            <!-- Template Main JS File -->
+                                            <script src="assets/js/main.js"></script>
+                                            <script src="assets/js/dashboard.js"></script>
+                                            
+                                          </body>
+                                          
+                                          </html>

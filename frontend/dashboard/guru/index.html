@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
+    <link rel="stylesheet" href="https://unpkg.com/@adminkit/core@latest/dist/css/app.css">
+    <link rel="stylesheet" href="../../assets/css/essentials_dashboard.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css"
+    integrity="sha512-ELV+xyi8IhEApPS/pSj66+Jiw+sOT1Mqkzlh8ExXihe4zfqbWkxPRi8wptXIO9g73FSlhmquFlUOuMSoXz5IRw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/node-snackbar@latest/dist/snackbar.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        .form-label {
+            font-weight: 700;
+            font-size: medium;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="modal fade" id="add-guru-modal" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <form action="post" id="addGuruForm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fw-bold" id="addModalLabel">Add Guru</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body px-4 py-3">
+                       <div class="row">
+                            <div class="col-6">
+                                <div class="mb-3">
+                                    <label for="nip-add" class="form-label">NIP</label>
+                                    <input type="text" name="nip" class="form-control"
+                                        id="nip-add">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="ttl-add" class="form-label">Tempat, Tanggal Lahir</label>
+                                    <input type="text" name="tgl_lahir" class="form-control"
+                                        id="ttl-add">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="agama-add" class="form-label">Agama</label>
+                                    <input type="text" name="agama" class="form-control"
+                                        id="agama-add">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="alamat-add" class="form-label">Alamat</label>
+                                    <textarea name="alamat" class="form-control"
+                                        id="alamat-add"></textarea>
+                                </div>
+                                
+                            </div>
+                            <div class="col-6">
+                                <div class="mb-3">
+                                    <label for="guru-add" class="form-label">Nama Guru</label>
+                                    <input type="text" name="nama_guru" class="form-control"
+                                        id="guru-add">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="hp-add" class="form-label">Kelas</label>
+                                    <input type="text" name="no_hp" class="form-control"
+                                        id="hp-add">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="pendidikan-add" class="form-label">Pendidikan</label>
+                                    <textarea name="pendidikan" class="form-control"
+                                        id="pendidikan-add"></textarea>
+                                </div>
+                            </div>
+                       </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="modal fade" id="edit-guru-modal" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <form action="post" id="editGuruForm">
+                <input type="hidden" name="foto" value="-">
+                <input type="hidden" id="old_nip" name="old_nip" value="">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fw-bold" id="addModalLabel">Edit Guru</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body px-4 py-3">
+                       <div class="row">
+                            <div class="col-6">
+                                <div class="mb-3">
+                                    <label for="nip-edit" class="form-label">NIP</label>
+                                    <input type="text" name="nip" class="form-control"
+                                        id="nip-edit">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="ttl-edit" class="form-label">Tempat, Tanggal Lahir</label>
+                                    <input type="text" name="tgl_lahir" class="form-control"
+                                        id="ttl-edit">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="agama-edit" class="form-label">Agama</label>
+                                    <input type="text" name="agama" class="form-control"
+                                        id="agama-edit">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="alamat-edit" class="form-label">Alamat</label>
+                                    <textarea name="alamat" class="form-control"
+                                        id="alamat-edit"></textarea>
+                                </div>
+                                
+                            </div>
+                            <div class="col-6">
+                                <div class="mb-3">
+                                    <label for="guru-edit" class="form-label">Nama Guru</label>
+                                    <input type="text" name="nama_guru" class="form-control"
+                                        id="guru-edit">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="hp-edit" class="form-label">Kelas</label>
+                                    <input type="text" name="no_hp" class="form-control"
+                                        id="hp-edit">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="pendidikan-edit" class="form-label">Pendidikan</label>
+                                    <textarea name="pendidikan" class="form-control"
+                                        id="pendidikan-edit"></textarea>
+                                </div>
+                            </div>
+                       </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="modal fade" id="delete-guru-modal" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <form action="post" id="deleteGuruForm">
+                <input type="hidden" name="nip" id="nip-delete">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fw-bold" id="addModalLabel">Hapus Guru</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body px-4 py-3">
+                       <span>Ingin menghapus guru dengan nama </span><span class="fw-bold" id="guru-delete"></span><span> ?</span>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-danger">Save changes</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <div class="wrapper">
+        <nav id="sidebar" class="sidebar js-sidebar">
+            <div class="sidebar-content js-simplebar">
+                <a class="sidebar-brand" href="/">
+                    <span class="align-middle">Dashboard</span>
+                </a>
+                
+                <ul class="sidebar-nav">
+                    <li class="sidebar-header">
+                        Control Center
+                    </li>
+                    
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="/dashboard/siswa/">
+                            <i class="align-middle" data-feather="users"></i> <span class="align-middle">Data Siswa</span>
+                        </a>
+                    </li>
+                    
+                    <li class="sidebar-item active">
+                        <a class="sidebar-link" href="#">
+                            <i class="align-middle" data-feather="user"></i> <span class="align-middle">Data Guru</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="/dashboard/prestasi/">
+                            <i class="align-middle" data-feather="award"></i> <span class="align-middle">Prestasi</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="/dashboard/mapel/">
+                            <i class="align-middle" data-feather="book"></i> <span class="align-middle">Mata Pelajaran</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="/dashboard/galeri/">
+                            <i class="align-middle" data-feather="image"></i> <span class="align-middle">Galeri</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="/dashboard/berita/">
+                            <i class="align-middle" data-feather="book-open"></i> <span class="align-middle">Berita</span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                
+            </div>
+        </nav>
+        
+        <div class="main">
+            <nav class="navbar navbar-expand navbar-light navbar-bg">
+                <a class="sidebar-toggle js-sidebar-toggle">
+                    <i class="hamburger align-self-center"></i>
+                </a>
+                
+                <div class="navbar-collapse collapse">
+                    <ul class="navbar-nav navbar-align">
+                        <li class="nav-item dropdown">
+                            <a class="nav-icon dropdown-toggle" href="#" id="alertsDropdown" data-bs-toggle="dropdown">
+                                <div class="position-relative">
+                                    <i class="align-middle" data-feather="bell"></i>
+                                    <span class="indicator">4</span>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0"
+                            aria-labelledby="alertsDropdown">
+                            <div class="dropdown-menu-header">
+                                4 New Notifications
+                            </div>
+                            <div class="list-group">
+                                <a href="#" class="list-group-item">
+                                    <div class="row g-0 align-items-center">
+                                        <div class="col-2">
+                                            <i class="text-danger" data-feather="alert-circle"></i>
+                                        </div>
+                                        <div class="col-10">
+                                            <div class="text-dark">Update completed</div>
+                                            <div class="text-muted small mt-1">Restart server 12 to complete the
+                                                update.</div>
+                                                <div class="text-muted small mt-1">30m ago</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <div class="row g-0 align-items-center">
+                                            <div class="col-2">
+                                                <i class="text-warning" data-feather="bell"></i>
+                                            </div>
+                                            <div class="col-10">
+                                                <div class="text-dark">Lorem ipsum</div>
+                                                <div class="text-muted small mt-1">Aliquam ex eros, imperdiet vulputate
+                                                    hendrerit et.</div>
+                                                    <div class="text-muted small mt-1">2h ago</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="list-group-item">
+                                            <div class="row g-0 align-items-center">
+                                                <div class="col-2">
+                                                    <i class="text-primary" data-feather="home"></i>
+                                                </div>
+                                                <div class="col-10">
+                                                    <div class="text-dark">Login from 192.186.1.8</div>
+                                                    <div class="text-muted small mt-1">5h ago</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="list-group-item">
+                                            <div class="row g-0 align-items-center">
+                                                <div class="col-2">
+                                                    <i class="text-success" data-feather="user-plus"></i>
+                                                </div>
+                                                <div class="col-10">
+                                                    <div class="text-dark">New connection</div>
+                                                    <div class="text-muted small mt-1">Christina accepted your request.
+                                                    </div>
+                                                    <div class="text-muted small mt-1">14h ago</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="dropdown-menu-footer">
+                                        <a href="#" class="text-muted">Show all notifications</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#"
+                                data-bs-toggle="dropdown">
+                                <i class="align-middle" data-feather="settings"></i>
+                            </a>
+                            
+                            <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#"
+                            data-bs-toggle="dropdown">
+                            <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80"
+                            class="avatar img-fluid rounded me-1" alt="Charles Hall" /> <span
+                            class="text-dark">Admin</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <a class="dropdown-item" href="pages-profile.html"><i class="align-middle me-1"
+                                data-feather="user"></i> Profile</a>
+                                <a class="dropdown-item" href="#"><i class="align-middle me-1"
+                                    data-feather="pie-chart"></i> Analytics</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="index.html"><i class="align-middle me-1"
+                                        data-feather="settings"></i> Settings & Privacy</a>
+                                        <a class="dropdown-item" href="#"><i class="align-middle me-1"
+                                            data-feather="help-circle"></i> Help Center</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item"  href="#"><span class="logout">Log out</span></a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                        
+                        <main class="content">
+                            <div class="container-fluid p-0">
+                                <div>
+                                    <button id="add-guru-btn" class="btn  btn-pill btn-primary">Tambah Guru</button>
+                                </div>
+                                <div class="card px-2 py-3 mt-4">
+                                    <table class="table table-guru">
+                                        <thead class="text-uppercase fw-bold">
+                                            <tr>
+                                                
+                                                <td>
+                                                    NIP
+                                                </td>
+                                                <td>
+                                                    Nama Guru
+                                                </td>
+                                                <td>
+                                                    Tanggal Lahir
+                                                </td>
+                                                <td>
+                                                    Agama
+                                                </td>
+                                                <td>
+                                                    Alamat
+                                                </td>
+                                                <td>
+                                                    No Hp
+                                                </td>
+                                                <td>
+                                                    Pendidikan
+                                                </td>
+                                                <td>
+                                                    Foto
+                                                </td>
+                                                <td>
+                                                    Action
+                                                </td>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="data-guru">
+                                            
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </main>
+                        
+                        <footer class="footer">
+                            <div class="container-fluid">
+                                <div class="row text-muted">
+                                    <div class="col-6 text-start">
+                                        <p class="mb-0">
+                                            <a class="text-muted" href="" target="_blank"><strong>Perbankan Syariah</strong></a> - <a
+                                            class="text-muted" href="#" target="_blank"><strong>Dashboard</strong></a>
+                                            &copy;2022
+                                        </p>
+                                    </div>
+                                    <div class="col-6 text-end">
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item">
+                                                <a class="text-muted" href="#" target="_blank">Support</a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a class="text-muted" href="#" target="_blank">Help Center</a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a class="text-muted" href="#" target="_blank">Privacy</a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a class="text-muted" href="#" target="_blank">Terms</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </footer>
+                    </div>
+                </div>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+                integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+                crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/js/bootstrap.min.js"
+                integrity="sha512-UR25UO94eTnCVwjbXozyeVd6ZqpaAE9naiEUBK/A+QDbfSTQFhPGj5lOR6d8tsgbBk84Ggb5A3EkjsOgPRPcKA=="
+                crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+                <script src="https://unpkg.com/@adminkit/core@latest/dist/js/app.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.21/js/jquery.dataTables.min.js" integrity="sha512-BkpSL20WETFylMrcirBahHfSnY++H2O1W+UnEEO4yNIl+jI2+zowyoGJpbtk6bx97fBXf++WJHSSK2MV4ghPcg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"
+                integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q=="
+                crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+                <script src="https://unpkg.com/@popperjs/core@2"></script>
+                <script src="https://unpkg.com/tippy.js@6"></script>
+                <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/node-snackbar@latest/src/js/snackbar.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+                <script type="text/javascript"
+                src="https://cdn.jsdelivr.net/npm/node-snackbar@latest/src/js/snackbar.min.js"></script>
+                <script
+                src="https://cdnjs.cloudflare.com/ajax/libs/jquery-serialize-object/2.5.0/jquery.serialize-object.min.js"></script>
+                <script src="../../assets/js/dashboard.js"></script>
+                <script src="../../assets/js/essentials.js"></script>
+
+                <script>
+                </script>
+                <script>
+                    feather.replace()
+                </script>
+            </body>
+            
+            </html>
